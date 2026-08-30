@@ -26,7 +26,7 @@ export default function Incidents() {
         <p>Every registered disaster zone, filterable by severity</p>
       </div>
 
-      <div style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
+      <div style={{ display: 'flex', gap: 8, marginBottom: 16, flexWrap: 'wrap' }}>
         {['all', 'critical', 'high', 'moderate', 'low'].map(s => (
           <button
             key={s}
