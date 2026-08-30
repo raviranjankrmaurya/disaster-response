@@ -37,7 +37,7 @@ export default function Volunteers() {
 
       <div className="panel" style={{ marginBottom: 16 }}>
         <div className="panel-header"><h2>Add Volunteer</h2></div>
-        <div style={{ display: 'flex', gap: 10 }}>
+        <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
           <input
             value={name}
             onChange={e => setName(e.target.value)}
