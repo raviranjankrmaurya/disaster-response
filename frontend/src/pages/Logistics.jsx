@@ -39,7 +39,7 @@ export default function Logistics() {
 
       <div className="panel" style={{ marginBottom: 16 }}>
         <div className="panel-header"><h2>Run Allocation</h2></div>
-        <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
+        <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap' }}>
           <select
             value={resourceType}
             onChange={e => setResourceType(e.target.value)}
