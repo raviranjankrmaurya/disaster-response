@@ -17,7 +17,7 @@ export default function Logistics() {
   const runAllocation = () => {
     setLoading(true)
     setError(null)
-    api.post('/api/logistics/allocate', { resource_type: resourceType })
+    api.post('?path=logistics/allocate', { resource_type: resourceType })
       .then(res => setResult(res.data))
       .catch(err => {
         console.error(err)

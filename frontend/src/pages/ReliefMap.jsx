@@ -46,7 +46,7 @@ export default function ReliefMap() {
   const [zones, setZones] = useState([])
 
   useEffect(() => {
-    api.get('/api/zones/')
+    api.get('?path=zones/')
       .then(res => setZones(res.data))
       .catch(err => console.error('Failed to load zones:', err))
   }, [])

@@ -9,7 +9,7 @@ export default function Volunteers() {
   const [error, setError] = useState(null)
 
   const load = () => {
-    api.get('/api/volunteers/')
+    api.get('?path=volunteers/')
       .then(res => setVolunteers(res.data))
       .catch(err => console.error('Failed to load volunteers:', err))
       .finally(() => setLoading(false))
@@ -20,7 +20,7 @@ export default function Volunteers() {
   const addVolunteer = () => {
     if (!name.trim()) return
     setError(null)
-    api.post('/api/volunteers/', { name, skill })
+    api.post('?path=volunteers/', { name, skill })
       .then(() => { setName(''); load() })
       .catch(err => {
         console.error(err)

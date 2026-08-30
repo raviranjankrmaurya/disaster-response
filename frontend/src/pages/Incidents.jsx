@@ -9,7 +9,7 @@ export default function Incidents() {
   const [filter, setFilter] = useState('all')
 
   useEffect(() => {
-    api.get('/api/zones/')
+    api.get('?path=zones/')
       .then(res => setZones(res.data))
       .catch(err => console.error('Failed to load zones:', err))
       .finally(() => setLoading(false))
